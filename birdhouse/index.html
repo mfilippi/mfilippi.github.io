@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Birdhouse Camera</title>
+  <meta name="description" content="Birdhouse Camera: diretta 24/7 da una casetta nido.">
+  <style>
+    :root { --bg: #f3f5f1; --card: #fff; --text: #16201a; --muted: #5f6b63; --accent: #2f8a5b; --border: #e2e7e2; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #0d120f; --card: #151c17; --text: #e7eee9; --muted: #93a298; --accent: #4cc283; --border: #253029; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    main { max-width: 860px; margin: 0 auto; padding: 32px 20px 48px; }
+    header { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+    .logo { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: linear-gradient(135deg, var(--accent), #8bc34a); color: #fff; font-size: 26px; }
+    h1 { margin: 0; font-size: 1.8rem; letter-spacing: -.02em; }
+    .sub { margin: 0; color: var(--muted); }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 22px; margin-top: 16px; }
+    .video { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: #000; }
+    .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    a { color: var(--accent); font-weight: 600; }
+    footer { margin-top: 28px; color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="logo">🐦</div>
+      <div>
+        <h1>Birdhouse Camera</h1>
+        <p class="sub">La vita di un nido di uccelli, in diretta 24 ore su 24.</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/live_stream?channel=UCzZ1VlI7l2BDdph1FZvy0hQ" title="Diretta Birdhouse Camera"
+                allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p style="margin:14px 0 0">Guarda la diretta sul canale YouTube:
+        <a href="https://www.youtube.com/@BirdHouseCamera-000/live" target="_blank" rel="noopener">youtube.com/@BirdHouseCamera-000/live</a></p>
+    </section>
+
+    <section class="card">
+      <h2 style="margin-top:0">Il progetto</h2>
+      <p>Birdhouse Camera è un progetto personale e non commerciale: una piccola telecamera con visione notturna, montata dentro
+        una casetta nido, trasmette in diretta su YouTube quello che succede nel nido: la costruzione, la cova, la schiusa e la
+        crescita dei piccoli.</p>
+      <p>Il dispositivo, basato su Raspberry Pi, gestisce la diretta in modo autonomo. Per riavviare automaticamente la diretta
+        dopo un'interruzione di corrente o di rete utilizza le API di YouTube, autorizzate esclusivamente dal proprietario del canale.</p>
+    </section>
+
+    <footer>
+      © Matteo Filippi · <a href="privacy.html">Informativa privacy</a>
+    </footer>
+  </main>
+</body>
+</html>
